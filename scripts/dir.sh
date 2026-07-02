@@ -21,3 +21,11 @@ touch 01_download_or_prepare_data.py \
 08_train_baseline_model.py \
 09_test_second_dataset.py 
  
+touch README.md
+touch docs/module_documentation.md
+touch config/config.yaml
+touch environment/environment.yml
+touch environment/Dockerfile
+touch outputs/reports/dataset_selection_report.md
+touch outputs/reports/data_overview.md
+cd ..
