@@ -15,6 +15,8 @@ TCGA-BRCA was selected as the primary dataset for construction of the pipeline m
 
 ## Usage
 ### Installation
+python version: 3.9.6
+python3 -m pip install pandas
 
 
 
