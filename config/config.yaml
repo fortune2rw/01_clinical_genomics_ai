@@ -1,0 +1,11 @@
+# --- Projects ---
+project_ids:
+  - "TCGA-BRCA"
+  - "TCGA-LAML"
+
+primary_project: "TCGA-BRCA"
+secondary_project: "TCGA-LAML"
+
+# --- Raw inputs (produced by 01_download_or_prepare_data.py) ---
+raw_clinical_file: "data/raw/cli_metadata.tsv"
+raw_mutation_file: "data/raw/mutation_metadata.tsv"
