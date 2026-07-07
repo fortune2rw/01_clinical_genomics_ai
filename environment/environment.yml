@@ -1,0 +1,14 @@
+# environment/environment.yml
+# Recreate with: conda env create -f environment/environment.yml
+#Run : conda activate clinical-genomics-ai
+name: clinical-genomics-ai
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pandas=2.2.1
+  - numpy=1.26.4
+  - requests=2.31.0
+  - pyyaml=6.0.1
+  - matplotlib=3.8.2
+  - scikit-learn=1.4.0
