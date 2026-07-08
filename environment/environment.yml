@@ -1,6 +1,8 @@
 # environment/environment.yml
 # Recreate with: conda env create -f environment/environment.yml
-#Run : conda activate clinical-genomics-ai
+# Run : conda init
+# Run: conda activate clinical-genomics-ai
+
 name: clinical-genomics-ai
 channels:
   - conda-forge
