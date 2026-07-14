@@ -48,6 +48,7 @@ cli_fields = [
     "demographic.sex_at_birth",                     
     "demographic.vital_status",
     "demographic.days_to_death",
+    "demographic.days_to_last_follow_up",
     "diagnoses.days_to_last_follow_up",
     "demographic.age_at_index",
     "diagnoses.primary_diagnosis",
@@ -57,6 +58,8 @@ cli_fields = [
     "diagnoses.treatments.treatment_effect",
     "diagnoses.treatments.treatment_or_therapy",
     "family_histories.relative_with_cancer_history",
+    "exposures.tobacco_smoking_status",
+    "exposures.alcohol_history"
 ]
 
 validate_fields(cli_fields, CASE_ENDPT)
