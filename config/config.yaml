@@ -35,3 +35,13 @@ vital_status_col: "demographic.vital_status"
 days_to_death_col: "demographic.days_to_death"
 days_to_last_follow_up_col: "diagnoses.0.days_to_last_follow_up"
 
+# --- tops genes to encode
+encode_top_genes: 20
+
+
+# --- Outcome variable
+outcome_varibale: "vital_status"
+
+# --- Model & Plot Settings
+model_settings:
+plot_settings: 
