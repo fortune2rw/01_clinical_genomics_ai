@@ -7,5 +7,31 @@ primary_project: "TCGA-BRCA"
 secondary_project: "TCGA-LAML"
 
 # --- Raw inputs (produced by 01_download_or_prepare_data.py) ---
-raw_clinical_file: "data/raw/cli_metadata.tsv"
-raw_mutation_file: "data/raw/mutation_metadata.tsv"
+Data_input_paths:
+ raw_clinical_file: "data/raw/cli_metadata.tsv"
+ raw_mutation_file: "data/raw/mutation_metadata.tsv"
+
+# --- Data output paths 
+Data_output_paths:
+ cleaned_cli_metadata: "data/processed/clinical_cleaned.csv"
+ missing_data : "outputs/tables/clinical_missingness_summary.csv"
+ cleaned_mut_metadata : "data/processed/genomics_cleaned.csv"
+ top_genes: "outputs/tables/top_mutated_genes.csv"
+ mutattion_counts: "outputs/tables/mutation_counts_per_patient.csv"
+ variant_class: "outputs/tables/variant_classification_summary.csv"
+ cli_mut_merged: "data/processed/clinical_genomics_merged"
+ id_matching_sum: "outputs/tables/id_matching_summary.csv"
+
+
+# --- Clinical ID column
+clinical_ID_col: "submitter_id" #TGGA barcode format
+
+
+# --- Mutation ID column
+mutatation_ID_col: "patient_id"
+
+# --- Raw column to build Overall survival status
+vital_status_col: "demographic.vital_status"
+days_to_death_col: "demographic.days_to_death"
+days_to_last_follow_up_col: "diagnoses.0.days_to_last_follow_up"
+
