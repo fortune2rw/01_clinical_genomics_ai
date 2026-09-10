@@ -163,11 +163,6 @@ nextflow run workflow/nextflow/main.nf -profile local
 
 ## Limitations
 
-- **Mixed cohort in current outputs:** the clinical download step does not
-  currently request `project.project_id` as a returned field, so BRCA and
-  LAML patients are combined in one file with no cohort identifier. The
-  ML feature table and baseline model therefore currently train on a
-  mixed BRCA+LAML population rather than BRCA only as intended. 
 - **AML-specific fields are empty for BRCA cases** (e.g.
   `diagnoses.eln_risk_classification`), as expected given
   differing clinical protocols per cancer type, not a data quality issue.
@@ -193,8 +188,6 @@ nextflow run workflow/nextflow/main.nf -profile local
 
 ## Future Work 
 
-- Add `project.project_id` to the clinical download and re-run the
-  pipeline with proper BRCA-only filtering.
 - Extend driver-gene and pathway-level mutation flags using an external
   gene-to-pathway reference.
 - Address class imbalance (~80/20 alive/dead split) in baseline model
@@ -207,5 +200,4 @@ nextflow run workflow/nextflow/main.nf -profile local
 ## Reference
 
 TCGA: [https://pmc.ncbi.nlm.nih.gov/articles/PMC6066282/](https://pmc.ncbi.nlm.nih.gov/articles/PMC6066282/)
-
-Nextflow: Di Tommaso, P., Chatzou, M., Floden, E. et al. Nextflow enables reproducible computational workflows. Nat Biotechnol 35, 316–319 (2017). (https://doi.org/10.1038/nbt.3820/)
+Nextflow: Di Tommaso, P., Chatzou, M., Floden, E. et al. Nextflow enables reproducible computational workflows. Nat Biotechnol 35, 316–319 (2017) [https://doi.org/10.1038/nbt.3820/](https://doi.org/10.1038/nbt.3820/)
