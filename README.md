@@ -208,4 +208,4 @@ nextflow run workflow/nextflow/main.nf -profile local
 
 TCGA: [https://pmc.ncbi.nlm.nih.gov/articles/PMC6066282/](https://pmc.ncbi.nlm.nih.gov/articles/PMC6066282/)
 
-Nextflow: [Di Tommaso, P., Chatzou, M., Floden, E. et al. Nextflow enables reproducible computational workflows. Nat Biotechnol 35, 316–319 (2017)] [https://doi.org/10.1038/nbt.3820/]
+Nextflow: Di Tommaso, P., Chatzou, M., Floden, E. et al. Nextflow enables reproducible computational workflows. Nat Biotechnol 35, 316–319 (2017). (https://doi.org/10.1038/nbt.3820/)
