@@ -113,10 +113,8 @@ conda env update -f environment/environment.yml --prune
 
 ```bash
 docker build -t clinical-genomics-ai -f environment/Dockerfile .
-docker run --rm -v "$(pwd)":/app clinical-genomics-ai python3 scripts/02_clean_clinical_data.py
+docker run --rm -v "$(pwd)":/app clinical-genomics-ai python3 scripts/example_python_script.py
 ```
-*(Docker setup is a first attempt — not yet fully
-tested.)*
 
 ## How to Run Each Script
 
@@ -137,7 +135,9 @@ python3 scripts/09_test_second_dataset.py           # tests pipeline generalisab
 
 Or run the full pipeline end-to-end using Nextflow:
 ```bash
-nextflow run workflow/nextflow/main.nf -profile local
+nextflow run workflow/nextflow/main.nf -profile local #local machine
+nextflow run workflow/nextflow/main.nf -profile docker #docker profile
+nextflow run workflow/nextflow/main.nf -profile conda #conda profile
 ```
 
 ## Outputs
@@ -183,8 +183,6 @@ nextflow run workflow/nextflow/main.nf -profile local
   GDC** — they are derived here from `vital_status`, `days_to_death`, and
   `days_to_last_follow_up`, following standard survival-analysis
   convention.
-- **Docker setup is an unrefined first attempt** and has not been fully
-  validated end-to-end.
 
 ## Future Work 
 
@@ -192,7 +190,7 @@ nextflow run workflow/nextflow/main.nf -profile local
   gene-to-pathway reference.
 - Address class imbalance (~80/20 alive/dead split) in baseline model
   evaluation with additional metrics or resampling approaches.
-- Refine and fully test the Docker environment.
+- Refine and fully test the Docker environment.(Resolved September 19th 2026).
 - Month 2 task: extend the pipeline to incorporate the epigenomics layer,
   connecting gene regulation data with the clinical-genomic foundation
   built here.
