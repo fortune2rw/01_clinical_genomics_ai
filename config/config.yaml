@@ -7,20 +7,46 @@ primary_project: "TCGA-BRCA"
 secondary_project: "TCGA-LAML"
 
 # --- Raw inputs (produced by 01_download_or_prepare_data.py) ---
-Data_input_paths:
- raw_clinical_file: "data/raw/cli_metadata.tsv"
- raw_mutation_file: "data/raw/mutation_metadata.tsv"
+raw_clinical_file: "data/raw/cli_metadata.tsv"
+raw_mutation_file: "data/raw/mutation_metadata.tsv"
 
 # --- Data output paths 
-Data_output_paths:
- cleaned_cli_metadata: "data/processed/clinical_cleaned.csv"
- missing_data : "outputs/tables/clinical_missingness_summary.csv"
- cleaned_mut_metadata : "data/processed/genomics_cleaned.csv"
- top_genes: "outputs/tables/top_mutated_genes.csv"
- mutattion_counts: "outputs/tables/mutation_counts_per_patient.csv"
- variant_class: "outputs/tables/variant_classification_summary.csv"
- cli_mut_merged: "data/processed/clinical_genomics_merged"
- id_matching_sum: "outputs/tables/id_matching_summary.csv"
+data_output_paths:
+  cleaned_cli_metadata: "data/processed/clinical_cleaned.csv"
+  missing_data: "outputs/tables/clinical_missingness_summary.csv"
+  cleaned_mut_metadata : "data/processed/genomics_cleaned.csv"
+  top_genes: "outputs/tables/top_mutated_genes.csv"
+  mutation_counts: "outputs/tables/mutation_counts_per_patient.csv"
+  variant_class: "outputs/tables/variant_classification_summary.csv"
+  cli_mut_merged: "data/processed/clinical_genomics_merged.csv"
+  id_matching_sum: "outputs/tables/id_matching_summary.csv"
+  mutation_burden_summary: "outputs/tables/mutation_burden_summary.csv"
+  clinical_genomic_summary: "outputs/tables/clinical_genomic_summary.csv"
+  mutation_burden_summary: "outputs/tables/mutation_burden_summary.csv"
+  clinical_genomic_summary: "outputs/tables/clinical_genomic_summary.csv"
+  ml_feature_table: "data/processed/ml_feature_table.csv"
+  model_performance_summary: "outputs/tables/model_performance_summary.csv"
+  feature_importance: "outputs/tables/feature_importance.csv"
+
+# Model file output
+model_output_paths:
+  baseline_model: "outputs/models/baseline_model.pk1"
+  model_performance_summary: "outputs/tables/model_performance_summary.csv"
+  feature_importance: "outputs/tables/feature_importance.csv"
+  
+ # Model output paths
+model_output_paths:
+  baseline_model: "outputs/models/baseline_model.pk1"
+
+
+# Figures output paths
+figure_output_paths:
+  top_genes_barplot: "outputs/figures/top-mutated_genes_barplot.png"
+  variant_classification_dist: "outputs/figures/variant_classification_distribution.png"
+  mutations_per_patient: "outputs/figures/mutations_per_patient.png"
+  mutation_burden_by_group: "outputs/figures/mutation_burden_by_clinical_group.png"
+  confusion_matrix: "outputs/figures/confusion_matrix.png"
+  roc_curve: "outputs/figures/roc_curve.png"
 
 
 # --- Clinical ID column
@@ -28,7 +54,7 @@ clinical_ID_col: "submitter_id" #TGGA barcode format
 
 
 # --- Mutation ID column
-mutatation_ID_col: "patient_id"
+mutation_ID_col: "patient_id"
 
 # --- Raw column to build Overall survival status
 vital_status_col: "demographic.vital_status"
